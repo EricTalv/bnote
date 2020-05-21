@@ -1,22 +1,20 @@
+## Project description
 
-## Project description 
+I want to make a note taking application, simple.
 
-I want to make a note taking application simple.
+### First Goals
 
+- The user should be able for CRUD.
+- The user should be able to navigate through multiple notes.
+- Search function to find notes.
+- Create notes in different categories.
+- Create notes in different Notebooks.
+- Move notes trough categories.
+- Markdown editor.
+- Using localStorage to store notes.
 
-### First Goals 
+---
 
-+ Title and Description writing areas
-+ simple minimal styling 
-+ saving functionality 
-
-
-
-
-
-
-
------
 # React Default
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

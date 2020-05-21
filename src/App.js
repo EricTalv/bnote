@@ -1,55 +1,62 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function MyInfo() {
-  return (
+class App extends React.Component {
 
-    <div>
+  constructor() {
+    super();
+    this.state = {
+      noteTitle: 'sample title',
+      noteDescription: 'sample desc'
+    }
+  }
 
-      <h1>My Name</h1>
-      <p>This is my name!</p>  
+  render() {
 
-    </div>  
+    const myStyles = {
 
-  );
-}
+      maxWidth: 500,
+    }
+
+    return (
+      <div className="App">
+        <div className="container-fluid mt-5">
+          <div style={myStyles} className="row justify-content-center border mx-auto p-5">
+            <div class="form-group m-0 w-100">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Title"
+                onChange={(e) => { this.setState({ noteTitle: e.target.value }) }}
+              />
+
+              <textarea
+                type="text"
+                className="form-control my-4"
+                placeholder="Description"
+                onChange={(e) => { this.setState({ noteDescription: e.target.value }) }}
+
+              />
+
+              <button className="form-control">Save</button>
+            </div>
+          </div>
+
+          <hr />
+
+          <div className="row border justify-content-center mx-auto">
+            <div className=" m-2 p-5 border">
+              <h1>{this.state.noteTitle}</h1>
+              <p>{this.state.noteDescription}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    );
+  }
 
 
-function MyInfo2() {
-  return (
-
-    <div>
-
-      <h1>My Name2</h1>
-      <p>This is my name2!</p>  
-
-    </div>  
-
-  );
-}
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
-      <MyInfo />
-    </div>
-  );
 }
 
 export default App;
