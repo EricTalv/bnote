@@ -1,3 +1,24 @@
+
+## Project description 
+
+I want to make a note taking application simple.
+
+
+### First Goals 
+
++ Title and Description writing areas
++ simple minimal styling 
++ saving functionality 
+
+
+
+
+
+
+
+-----
+# React Default
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
