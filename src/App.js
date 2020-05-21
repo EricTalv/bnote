@@ -1,15 +1,34 @@
 import React from 'react';
 import './App.css';
 
+import localStorage from 'local-storage'
+
 class App extends React.Component {
+
 
   constructor() {
     super();
-    this.state = {
-      noteTitle: 'sample title',
-      noteDescription: 'sample desc'
-    }
+
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
+
+  state = {
+    noteTitle: 'sample title',
+    noteDescription: 'sample desc',
+
+
+  }
+
+
+  handleFormSubmit = () => {
+
+    const { noteTitle, noteDescription } = this.state;
+
+    localStorage.setItem('noteTitle', noteTitle);
+    localStorage.setItem('noteDescription', noteDescription);
+
+  };
+
 
   render() {
 
@@ -22,7 +41,9 @@ class App extends React.Component {
       <div className="App">
         <div className="container-fluid mt-5">
           <div style={myStyles} className="row justify-content-center border mx-auto p-5">
-            <div class="form-group m-0 w-100">
+            <div className="form-group m-0 w-100">
+
+
               <input
                 type="text"
                 className="form-control"
@@ -38,7 +59,8 @@ class App extends React.Component {
 
               />
 
-              <button className="form-control">Save</button>
+              <button onClick={handleFormSubmit} className="form-control">Save</button>
+
             </div>
           </div>
 
