@@ -1,22 +1,22 @@
 import React from 'react';
 
-class App extends React.Component {
+class BNote extends React.Component {
   constructor() {
     super();
   }
 
   state = {
-    currentNoteTitle: 'sample title',
-    currentNoteDescription: 'sample desc',
+    noteTitle: 'sample title',
+    noteDescription: 'sample desc',
 
     notesList: [],
   };
 
   handleFormSubmit = () => {
-    // const { currentNoteTitle, currentNoteDescription } = this.state;
-    // localStorage.setItem('currentNoteTitle', currentNoteTitle);
-    // localStorage.setItem('currentNoteDescription', currentNoteDescription);
-    // Put current note into notes list
+    const { noteTitle, noteDescription } = this.state;
+
+    localStorage.setItem('noteTitle', noteTitle);
+    localStorage.setItem('noteDescription', noteDescription);
   };
 
   render() {
@@ -37,7 +37,7 @@ class App extends React.Component {
                 className='form-control'
                 placeholder='Title'
                 onChange={(e) => {
-                  this.setState({ currentNoteTitle: e.target.value });
+                  this.setState({ noteTitle: e.target.value });
                 }}
               />
 
@@ -46,7 +46,7 @@ class App extends React.Component {
                 className='form-control my-4'
                 placeholder='Description'
                 onChange={(e) => {
-                  this.setState({ currentNoteDescription: e.target.value });
+                  this.setState({ noteDescription: e.target.value });
                 }}
               />
 
@@ -63,8 +63,8 @@ class App extends React.Component {
 
           <div className='row border justify-content-center mx-auto'>
             <div className=' m-2 p-5 border'>
-              <h1>{this.state.currentNoteTitle}</h1>
-              <p>{this.state.currentNoteDescription}</p>
+              <h1>{this.state.noteTitle}</h1>
+              <p>{this.state.noteDescription}</p>
             </div>
 
             {/* check if there is data in the list; display list data */}
@@ -80,4 +80,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default BNote;
