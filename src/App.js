@@ -9,7 +9,7 @@ class App extends React.Component {
     currentNoteTitle: 'sample title',
     currentNoteDescription: 'sample desc',
 
-    notesList: [],
+    notesList: {},
   };
 
   handleFormSubmit = () => {
@@ -68,11 +68,11 @@ class App extends React.Component {
             </div>
 
             {/* check if there is data in the list; display list data */}
-            {(this.state.notesList || []).map((item) => (
+            {/* {(this.state.notesList || []).map((item) => (
               <div className='m-2 p-5 border'>
                 <h1>{item}</h1>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
