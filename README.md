@@ -2,10 +2,14 @@
 
 I want to make a simple note taking application
 
+Progress bar:
+
+[=25%>               ] 
+
 ## MVP
 
 ```
-[ ] Writing area for notes
+[X] Writing area for notes
 [ ] Save note into a note list
 [ ] Save notes to local storage
 [ ] Note editing
