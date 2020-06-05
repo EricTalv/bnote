@@ -1,15 +1,16 @@
 import React from 'react';
 
 class App extends React.Component {
-  constructor() {
-    super();
-  }
-
   state = {
     currentNoteTitle: 'sample title',
     currentNoteDescription: 'sample desc',
 
-    notesList: {},
+    notesList: [
+      {
+        noteTitle: '',
+        noteDescription: '',
+      },
+    ],
   };
 
   handleFormSubmit = () => {
@@ -17,6 +18,17 @@ class App extends React.Component {
     // localStorage.setItem('currentNoteTitle', currentNoteTitle);
     // localStorage.setItem('currentNoteDescription', currentNoteDescription);
     // Put current note into notes list
+
+    let notes = [...this.state.notesList];
+
+    notes.push({
+      noteTitle: this.state.currentNoteTitle,
+      noteDescription: this.state.currentNoteDescription,
+    });
+
+    this.setState({ notes });
+
+    console.log(this.state);
   };
 
   render() {
@@ -66,13 +78,6 @@ class App extends React.Component {
               <h1>{this.state.currentNoteTitle}</h1>
               <p>{this.state.currentNoteDescription}</p>
             </div>
-
-            {/* check if there is data in the list; display list data */}
-            {/* {(this.state.notesList || []).map((item) => (
-              <div className='m-2 p-5 border'>
-                <h1>{item}</h1>
-              </div>
-            ))} */}
           </div>
         </div>
       </div>
