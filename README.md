@@ -1,21 +1,36 @@
 ## Project description
 
-I want to make a note taking application, simple.
+I want to make a simple note taking application
 
-### First Goals
+Progress bar:
 
-- The user should be able for CRUD.
-- The user should be able to navigate through multiple notes.
-- Search function to find notes.
-- Create notes in different categories.
-- Create notes in different Notebooks.
-- Move notes trough categories.
-- Markdown editor.
-- Using localStorage to store notes.
+[=25%>               ] 
 
----
+## MVP
 
-# React Default
+```
+[X] Writing area for notes
+[ ] Save note into a note list
+[ ] Save notes to local storage
+[ ] Note editing
+ 
+```
+
+## TODO
+
+```
+[X] Basic front end 
+[X] Live note editing
+[ ] Saving notes to a list 
+ [ ] front-end note display solution  
+[ ] Save notes to local storage 
+[ ] Note editing feature
+
+```
+
+----
+
+# This is a - > (React) - > project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
